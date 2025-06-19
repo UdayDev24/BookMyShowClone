@@ -6,11 +6,13 @@ A Java-based web application mimicking BookMyShow's core features, including hom
 
 ## Table of Contents
 - [Project Overview](#project-overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Setup & Installation](#setup--installation)
-- [Screenshots](#screenshots)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [Build the Project](#-build-the-project)
+- [Access the App](#-access-the-app)
+- [Screenshots](#-screenshots)
+- [Connect with Me](#-connect-with-me)
 
 ---
 
@@ -102,14 +104,15 @@ http://localhost:8080/bookmyshow-clone
 |------|------------|
 | 🏠 **Homepage** | ![Homepage](screenshots/home.png) |
 | 🔐 **Login/Register** | ![Login](screenshots/login-register.png) |
-| 🎬 **Movie Listing** | ![Movies](screenshots/movies.png) |
-| 🛠️ **Admin Dashboard** | ![Admin](screenshots/admin.png) |
+| 👤 **User Profile Edit** | ![User-Edit](screenshots/user-profile-edit.png) |
+| 🎬 **Ticket Booking** | ![Ticket-Boooking](screenshots/ticket-booking.png) |
+| 🛠️ **Admin Dashboard** | ![Admin](screenshots/admin-management.png) |
 
 
 ## 🔗 Connect with Me
 - **GitHub**: [@UdayDev24](https://github.com/UdayDev24)  
-- **LinkedIn**: [Your Name](https://linkedin.com/in/uday-m-005a0819b/)  
+- **LinkedIn**: [Uday M](https://linkedin.com/in/uday-m-005a0819b/)  
 - **Email**: uday864ud@gmail.com
 
-
+## 🎉 Thanks for checking out this project! Let me know if you need any improvements. 🚀
 
