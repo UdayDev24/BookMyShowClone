@@ -103,7 +103,7 @@ http://localhost:8080/bookmyshow-clone
 | Page | Screenshot |
 |------|------------|
 | 🏠 **Homepage** | ![Homepage](screenshots/home.png) |
-| 🔐 **Login/Register** | ![Login](screenshots/login-register.png) |
+| 🔐 **Login/Register** | ![Login](screenshots/register-login.jpg) |
 | 👤 **User Profile Edit** | ![User-Edit](screenshots/user-profile-edit.png) |
 | 🎬 **Ticket Booking** | ![Ticket-Boooking](screenshots/ticket-booking.png) |
 | 🛠️ **Admin Dashboard** | ![Admin](screenshots/admin-management.png) |
