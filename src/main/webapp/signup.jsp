@@ -1,166 +1,212 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Sign Up</title>
+<title>Sign Up | BookMyShow Clone</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+:root {
+    --primary-color: rgb(113, 2, 125);
+    --primary-hover: rgb(210, 57, 30);
+    --bg-color: #C0d6df;
+    --form-bg: rgba(236, 238, 188, 0.85);
+    --text-light: rgb(223, 213, 213);
+}
 
-<style type="text/css">
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body{
-    background-color: #C0d6df;
+body {
+    background-color: var(--bg-color);
     background-image: url(./assets/loginback);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-a{
-    text-decoration: none;
-    color: black;
-    font-weight:900;
-    font-size:1.2rem;
-
+.signup-container {
+    background-color: var(--form-bg);
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    backdrop-filter: blur(5px);
 }
 
-h1{
+.signup-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 700;
+    position: relative;
+}
+
+.signup-title:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 10px auto 0;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.form-col {
+    flex: 0 0 50%;
+    padding: 0 15px;
     margin-bottom: 20px;
 }
 
-input{
-    padding: 10px;
-    margin-top:5px;
-    width:300px;
+.input-group {
+    margin-bottom: 20px;
 }
 
-.flex{
-    display: flex;
+.input-group h4 {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
 }
 
-.primary-button{
-    background-color: rgb(113, 2, 125);
-    border-radius: 6px;
-    font-weight: 500;
-    color: rgb(223, 213, 213) !important;
-    padding: 6px 85px;
-    transition: 0.25s ease-out;
-    text-align: center;
-     width: 98%; 
-}
-
-.primary-button:hover{
-    cursor: pointer;
-    background-color: rgb(210, 57, 30);
-}
-
-.signup-div{
-    /* background-color: cadetblue; */
+.input-group input {
     width: 100%;
-    /* align-items: center; */
-    justify-content: center;
-    gap: 40px;
-   
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
 }
 
-.center{
-    margin-top:9%;
-    background-color: rgba(236, 238, 188, 0.7);
-    padding: 30px;
-    box-shadow: 10px 10px 5px rgb(236, 238, 188);
+.input-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(113, 2, 125, 0.2);
 }
 
-.name-div{
-    gap: 20px;
-    padding: 10px;
+.btn-container {
+    text-align: center;
+    margin-top: 20px;
 }
 
-.contact-div{
-    gap: 20px;
-    padding: 10px;
+.primary-button {
+    background-color: var(--primary-color);
+    color: var(--text-light) !important;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    min-width: 200px;
 }
 
-.password-div{
-    gap: 20px;
-    padding: 10px;
+.primary-button:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.btn{
-    /* width: 50%; */
-
-    margin: 30px 6px 0 6px;
-    padding: 10px;
+.login-link {
+    text-align: center;
+    margin-top: 25px;
+    color: #333;
 }
 
-.footer-section{
- 	text-align:center;
- 	margin-top:40px;
- 	
-
+.login-link a {
+    color: var(--primary-color) !important;
+    font-weight: 600;
+    transition: all 0.3s;
 }
 
-.ft:hover{
-
-	color:red;
-	font-size:1.1rem;
-	transition: ease 0.2s;
-
+.login-link a:hover {
+    color: var(--primary-hover) !important;
 }
 
+@media (max-width: 768px) {
+    .form-col {
+        flex: 0 0 100%;
+    }
+    
+    .signup-container {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+}
 </style>
-
 </head>
 <body>
-
-<form action="register" method="post" class="signup-div flex">
-
-  		<div class="center">
-            <h1 style="text-align:center;">Sign Up</h1>
-            <div class="name-div flex">
-                <div class="fullname">
-                    <h4>Full Name</h4><input type="text" placeholder="Enter your name" name="fname">
+    <form action="register" method="post" class="signup-container">
+        <h1 class="signup-title"><i class="fas fa-user-plus"></i> Create Account</h1>
+        
+        <div class="form-row">
+            <div class="form-col">
+                <div class="input-group">
+                    <h4>Full Name</h4>
+                    <input type="text" placeholder="Enter your full name" name="fname" required>
                 </div>
-                <div class="username">
+            </div>
+            <div class="form-col">
+                <div class="input-group">
                     <h4>Username</h4>
-                    <input type="text" placeholder="Enter your usernmae" name="uname">
+                    <input type="text" placeholder="Enter your username" name="uname" required>
                 </div>
             </div>
-            <div class="contact-div flex">
-                <div class="emailid">
-                    <h4>Email</h4>
-                    <input type="email" placeholder="Enter your email" name="email">
-                </div>
-                <div class="phonenum">
-                    <h4>Phone Number</h4>
-                    <input type="number" placeholder="Enter your number" name="phone">
-                </div>
-            </div>
-            <div class="password-div flex">
-                <div class="emailid">
-                    <h4>Password</h4>
-                    <input type="password" placeholder="Enter your password" name="pw" id="pw">
-                </div>
-                <div class="confopassword">
-                    <h4>Confirm Password</h4>
-                    <input type="password" placeholder="Confirm your password" name="cp">
-                </div>
-            </div>
-            <div style="text-align:center;">
-            <input type="submit" class="primary-button btn" name="register" value="Sign Up">
-            </div>
-            
-            <div class="footer-section">
-			 	<p>Don't have a account</p>
-				<a href="signin.jsp" class="ft" >Sign in</a>
-            </div>
-            	  
-					 
-                
         </div>
-	</form>
-
-
+        
+        <div class="form-row">
+            <div class="form-col">
+                <div class="input-group">
+                    <h4>Email</h4>
+                    <input type="email" placeholder="Enter your email" name="email" required>
+                </div>
+            </div>
+            <div class="form-col">
+                <div class="input-group">
+                    <h4>Phone Number</h4>
+                    <input type="tel" placeholder="Enter your phone number" name="phone" required>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-col">
+                <div class="input-group">
+                    <h4>Password</h4>
+                    <input type="password" placeholder="Create password" name="pw" id="pw" required>
+                </div>
+            </div>
+            <div class="form-col">
+                <div class="input-group">
+                    <h4>Confirm Password</h4>
+                    <input type="password" placeholder="Confirm password" name="cp" required>
+                </div>
+            </div>
+        </div>
+        
+        <div class="btn-container">
+            <button type="submit" class="primary-button" name="register">
+                <i class="fas fa-user-edit"></i> Sign Up
+            </button>
+        </div>
+        
+        <div class="login-link">
+            <p>Already have an account? <a href="signin.jsp">Sign In</a></p>
+        </div>
+    </form>
 </body>
 </html>

@@ -101,7 +101,7 @@ http://localhost:8080/bookmyshow-clone
 | Page | Screenshot |
 |------|------------|
 | 🏠 **Homepage** | ![Homepage](screenshots/home.png) |
-| 🔐 **Register** | ![Login](screenshots/login.png) |
+| 🔐 **Login/Register** | ![Login](screenshots/login-register.png) |
 | 🎬 **Movie Listing** | ![Movies](screenshots/movies.png) |
 | 🛠️ **Admin Dashboard** | ![Admin](screenshots/admin.png) |
 
